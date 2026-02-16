@@ -85,3 +85,33 @@
 2026-02-16 14:41:16,041 - Sentence='and adaptable to the evolving needs of their inhabitants.' | TTS=3019.18ms | Total=3019.18ms | Overhead=0.00ms
 2026-02-16 14:41:30,447 - Sentence='thank you for listening.' | TTS=2894.99ms | Total=2894.99ms | Overhead=0.00ms
 2026-02-16 14:41:57,078 - FINAL SUMMARY: Avg=2818.49ms | Max=3605.54ms | P95=3569.74ms
+2026-02-16 14:52:50,791 - Sentence='Perfect!' | TTS=3133.83ms | Total=3133.83ms | Overhead=0.00ms
+2026-02-16 14:52:54,109 - Sentence='Here’s a long paragraph on AI for testing your TTS system:
+
+Example Paragraph – Artificial Intelligence:
+
+Artificial Intelligence is rapidly transforming the way we live,' | TTS=3310.39ms | Total=3310.39ms | Overhead=0.00ms
+2026-02-16 14:52:57,269 - Sentence='work,' | TTS=3139.55ms | Total=3139.55ms | Overhead=0.00ms
+2026-02-16 14:53:00,631 - Sentence='and interact with technology,' | TTS=3355.96ms | Total=3355.96ms | Overhead=0.00ms
+2026-02-16 14:53:04,234 - Sentence='influencing industries ranging from healthcare and finance to entertainment and transportation.' | TTS=3592.61ms | Total=3592.61ms | Overhead=0.00ms
+2026-02-16 14:53:07,031 - Sentence='Machine learning algorithms enable computers to recognize patterns,' | TTS=2789.68ms | Total=2789.68ms | Overhead=0.00ms
+2026-02-16 14:53:10,252 - Sentence='make predictions,' | TTS=3207.34ms | Total=3207.34ms | Overhead=0.00ms
+2026-02-16 14:53:13,330 - Sentence='and even generate content,' | TTS=3068.90ms | Total=3068.90ms | Overhead=0.00ms
+2026-02-16 14:53:16,843 - Sentence='while natural language processing allows machines to understand and respond to human language in increasingly sophisticated ways.' | TTS=3464.45ms | Total=3464.45ms | Overhead=0.00ms
+2026-02-16 14:53:19,694 - Sentence='As AI systems become more capable,' | TTS=2742.78ms | Total=2742.78ms | Overhead=0.00ms
+2026-02-16 14:53:22,461 - Sentence='ethical considerations such as bias,' | TTS=2760.42ms | Total=2760.42ms | Overhead=0.00ms
+2026-02-16 14:53:25,662 - Sentence='transparency,' | TTS=3194.36ms | Total=3194.36ms | Overhead=0.00ms
+2026-02-16 14:53:28,864 - Sentence='and accountability are becoming critical,' | TTS=3194.66ms | Total=3194.66ms | Overhead=0.00ms
+2026-02-16 14:53:31,966 - Sentence='ensuring that decisions made by these systems are fair and trustworthy.' | TTS=3095.57ms | Total=3095.57ms | Overhead=0.00ms
+2026-02-16 14:53:34,960 - Sentence='Furthermore,' | TTS=2979.05ms | Total=2979.05ms | Overhead=0.00ms
+2026-02-16 14:53:38,215 - Sentence='advancements in robotics and autonomous systems are allowing AI to perform complex physical tasks,' | TTS=3239.30ms | Total=3239.30ms | Overhead=0.00ms
+2026-02-16 14:53:41,435 - Sentence='from surgical assistance to warehouse logistics,' | TTS=3205.48ms | Total=3205.48ms | Overhead=0.00ms
+2026-02-16 14:53:44,296 - Sentence='which were once only possible for humans.' | TTS=2849.31ms | Total=2849.31ms | Overhead=0.00ms
+2026-02-16 14:53:47,789 - Sentence='With continuous research and innovation,' | TTS=3464.44ms | Total=3464.44ms | Overhead=0.00ms
+2026-02-16 14:53:50,981 - Sentence='AI has the potential to enhance productivity,' | TTS=3098.93ms | Total=3098.93ms | Overhead=0.00ms
+2026-02-16 14:53:54,717 - Sentence='solve complex problems,' | TTS=3727.80ms | Total=3727.80ms | Overhead=0.00ms
+2026-02-16 14:53:57,690 - Sentence='and even augment human creativity,' | TTS=2963.23ms | Total=2963.23ms | Overhead=0.00ms
+2026-02-16 14:54:00,796 - Sentence='but it also challenges society to carefully manage its risks and responsibilities.' | TTS=3095.83ms | Total=3095.83ms | Overhead=0.00ms
+2026-02-16 14:54:26,658 - Sentence='This is my project demonstration ,' | TTS=3054.61ms | Total=3054.61ms | Overhead=0.00ms
+2026-02-16 14:54:35,339 - Sentence='Thank you for listening.' | TTS=2827.02ms | Total=2827.02ms | Overhead=0.00ms
+2026-02-16 14:55:04,193 - FINAL SUMMARY: Avg=3142.22ms | Max=3727.80ms | P95=3687.24ms

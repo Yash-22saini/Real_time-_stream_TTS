@@ -30,3 +30,14 @@ realtime_tts_stream/
 │
 ├── logs/                # Auto-generated CSV latency reports
 └── tts_metrics.log      # Performance logs
+
+## 📸 Demo Screenshots
+
+### 🎧 Live Streaming Output frrontend
+![Live Streaming frontend](screenshots/livestream.png)
+
+### 📊 Latency report and summary
+![Latency and optimization report ](screenshots/latency_report_and_summary.png)
+
+### 📌 logs
+![logs](screenshots/logs.png)
