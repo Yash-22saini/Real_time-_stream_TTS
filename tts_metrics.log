@@ -1,0 +1,40 @@
+2026-02-16 14:18:13,677 - Sentence='Technology is evolving at an incredible pace,' | TTS=2296.59ms | Total=2296.59ms | Overhead=0.00ms
+2026-02-16 14:18:15,813 - Sentence='transforming the way we communicate,' | TTS=2127.52ms | Total=2127.52ms | Overhead=0.00ms
+2026-02-16 14:18:18,320 - Sentence='work,' | TTS=2497.62ms | Total=2497.62ms | Overhead=0.00ms
+2026-02-16 14:18:20,248 - Sentence='and interact with the world around us,' | TTS=1919.19ms | Total=1919.19ms | Overhead=0.00ms
+2026-02-16 14:18:20,254 - FINAL SUMMARY: Avg=2210.23ms | Max=2497.62ms | P95=2648.39ms
+2026-02-16 14:18:32,966 - FINAL SUMMARY: Avg=2210.23ms | Max=2497.62ms | P95=2648.39ms
+2026-02-16 14:18:37,052 - Sentence='Technology is evolving at an incredible pace,' | TTS=2329.60ms | Total=2329.60ms | Overhead=0.00ms
+2026-02-16 14:18:39,240 - Sentence='transforming the way we communicate,' | TTS=2180.64ms | Total=2180.64ms | Overhead=0.00ms
+2026-02-16 14:18:41,798 - Sentence='work,' | TTS=2550.97ms | Total=2550.97ms | Overhead=0.00ms
+2026-02-16 14:18:44,070 - Sentence='and interact with the world around us,' | TTS=2265.60ms | Total=2265.60ms | Overhead=0.00ms
+2026-02-16 14:18:46,131 - Sentence='and as artificial intelligence continues to advance,' | TTS=2051.77ms | Total=2051.77ms | Overhead=0.00ms
+2026-02-16 14:18:48,457 - Sentence='real-time voice systems are becoming more natural,' | TTS=2314.85ms | Total=2314.85ms | Overhead=0.00ms
+2026-02-16 14:18:50,760 - Sentence='responsive,' | TTS=2293.01ms | Total=2293.01ms | Overhead=0.00ms
+2026-02-16 14:18:53,025 - Sentence='and intelligent than ever before.' | TTS=2258.20ms | Total=2258.20ms | Overhead=0.00ms
+2026-02-16 14:18:55,118 - Sentence='In modern applications,' | TTS=2086.52ms | Total=2086.52ms | Overhead=0.00ms
+2026-02-16 14:18:57,121 - Sentence='low latency is critical,' | TTS=1997.22ms | Total=1997.22ms | Overhead=0.00ms
+2026-02-16 14:18:59,268 - Sentence='because users expect instant feedback,' | TTS=2138.04ms | Total=2138.04ms | Overhead=0.00ms
+2026-02-16 14:19:01,912 - Sentence='seamless streaming,' | TTS=2635.87ms | Total=2635.87ms | Overhead=0.00ms
+2026-02-16 14:19:04,248 - Sentence='and high-quality audio without noticeable delays,' | TTS=2328.59ms | Total=2328.59ms | Overhead=0.00ms
+2026-02-16 14:19:06,453 - Sentence='especially when interacting with conversational assistants or live narration systems.' | TTS=2195.34ms | Total=2195.34ms | Overhead=0.00ms
+2026-02-16 14:19:08,603 - Sentence='When a system processes speech efficiently,' | TTS=2136.89ms | Total=2136.89ms | Overhead=0.00ms
+2026-02-16 14:19:10,913 - Sentence='streams audio in well-structured chunks,' | TTS=2300.00ms | Total=2300.00ms | Overhead=0.00ms
+2026-02-16 14:19:13,202 - Sentence='and minimizes network overhead,' | TTS=2280.85ms | Total=2280.85ms | Overhead=0.00ms
+2026-02-16 14:19:16,087 - Sentence='the experience feels smooth and immersive,' | TTS=2877.29ms | Total=2877.29ms | Overhead=0.00ms
+2026-02-16 14:19:18,366 - Sentence='allowing users to focus on the content rather than the technology behind it.' | TTS=2268.98ms | Total=2268.98ms | Overhead=0.00ms
+2026-02-16 14:19:20,536 - Sentence='However,' | TTS=2156.81ms | Total=2156.81ms | Overhead=0.00ms
+2026-02-16 14:19:22,598 - Sentence='achieving this level of performance requires careful optimization,' | TTS=2056.47ms | Total=2056.47ms | Overhead=0.00ms
+2026-02-16 14:19:24,636 - Sentence='proper handling of streaming buffers,' | TTS=2031.55ms | Total=2031.55ms | Overhead=0.00ms
+2026-02-16 14:19:26,677 - Sentence='intelligent sentence segmentation,' | TTS=2033.30ms | Total=2033.30ms | Overhead=0.00ms
+2026-02-16 14:19:28,799 - Sentence='and precise latency measurement,' | TTS=2113.73ms | Total=2113.73ms | Overhead=0.00ms
+2026-02-16 14:19:30,956 - Sentence='so that both the first audio byte and the total completion time are within acceptable limits.' | TTS=2150.47ms | Total=2150.47ms | Overhead=0.00ms
+2026-02-16 14:19:32,915 - Sentence='By testing long paragraphs with multiple commas,' | TTS=1949.76ms | Total=1949.76ms | Overhead=0.00ms
+2026-02-16 14:19:35,020 - Sentence='varied sentence lengths,' | TTS=2095.72ms | Total=2095.72ms | Overhead=0.00ms
+2026-02-16 14:19:37,144 - Sentence='and natural conversational phrasing,' | TTS=2113.63ms | Total=2113.63ms | Overhead=0.00ms
+2026-02-16 14:19:39,456 - Sentence='developers can better evaluate how their real-time text-to-speech pipeline performs under realistic conditions,' | TTS=2304.87ms | Total=2304.87ms | Overhead=0.00ms
+2026-02-16 14:19:41,619 - Sentence='ensuring that the system remains stable,' | TTS=2150.39ms | Total=2150.39ms | Overhead=0.00ms
+2026-02-16 14:19:43,869 - Sentence='scalable,' | TTS=2240.45ms | Total=2240.45ms | Overhead=0.00ms
+2026-02-16 14:19:46,005 - Sentence='and ready for production deployment.' | TTS=2129.06ms | Total=2129.06ms | Overhead=0.00ms
+2026-02-16 14:20:28,310 - FINAL SUMMARY: Avg=2218.26ms | Max=2877.29ms | P95=2672.08ms
+2026-02-16 14:20:41,119 - FINAL SUMMARY: Avg=2218.26ms | Max=2877.29ms | P95=2672.08ms

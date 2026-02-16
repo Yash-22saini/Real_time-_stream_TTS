@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Sentence Streaming TTS</title>
+</head>
+
+<body style="font-family: Arial; padding: 30px;">
+
+  <h2>🎙 Live Real-Time Sentence Streaming TTS</h2>
+
+  <p>
+    Type normally. Audio will play only after you finish a sentence
+    using <b>.</b> <b>?</b> <b>!</b><b>,</b>
+  </p>
+
+  <textarea 
+    id="textBox" 
+    rows="6" 
+    cols="70"
+    placeholder="Start typing... End sentence with . or ? or !">
+  </textarea>
+
+  <p id="status">Connecting...</p>
+
+  <audio id="audioPlayer" controls autoplay></audio>
+
+  <script>
+    // ✅ Connect WebSocket
+    const ws = new WebSocket("ws://localhost:8000/live-tts");
+
+    const textBox = document.getElementById("textBox");
+    const status = document.getElementById("status");
+    const audio = document.getElementById("audioPlayer");
+
+    // ✅ MediaSource setup for streaming audio
+    const mediaSource = new MediaSource();
+    audio.src = URL.createObjectURL(mediaSource);
+
+    let sourceBuffer;
+    let queue = [];
+
+    mediaSource.addEventListener("sourceopen", () => {
+      sourceBuffer = mediaSource.addSourceBuffer("audio/mpeg");
+
+      sourceBuffer.addEventListener("updateend", () => {
+        if (queue.length > 0 && !sourceBuffer.updating) {
+          sourceBuffer.appendBuffer(queue.shift());
+        }
+      });
+    });
+
+    // ✅ WebSocket Connected
+    ws.onopen = () => {
+      status.innerText = "✅ Connected. Start typing...";
+    };
+
+    // ✅ Receive audio from server
+    ws.onmessage = async (event) => {
+      if (event.data instanceof Blob) {
+        const arrayBuffer = await event.data.arrayBuffer();
+
+        if (!sourceBuffer.updating) {
+          sourceBuffer.appendBuffer(arrayBuffer);
+        } else {
+          queue.push(arrayBuffer);
+        }
+      }
+    };
+
+    ws.onerror = () => {
+      status.innerText = "❌ WebSocket error!";
+    };
+
+    ws.onclose = () => {
+      status.innerText = "🔌 Disconnected from server";
+    };
+
+    // ✅ Sentence Detection
+        let lastSentIndex = 0;
+
+        textBox.addEventListener("input", () => {
+         const fullText = textBox.value;
+
+        // 🔥 Detect ., ?, !, and ,
+        const sentences = fullText.match(/[^.!?,]+[.!?,]/g);
+        if (!sentences) return;
+
+        // Send only NEW segments
+        while (lastSentIndex < sentences.length) {
+        const sentence = sentences[lastSentIndex].trim();
+
+        if (sentence.length > 2) {
+            console.log("➡ Sending:", sentence);
+            ws.send(sentence);
+        }
+
+      lastSentIndex++;
+    }
+  });
+
+
+  </script>
+
+</body>
+</html>
+
