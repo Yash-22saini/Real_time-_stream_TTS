@@ -38,3 +38,50 @@
 2026-02-16 14:19:46,005 - Sentence='and ready for production deployment.' | TTS=2129.06ms | Total=2129.06ms | Overhead=0.00ms
 2026-02-16 14:20:28,310 - FINAL SUMMARY: Avg=2218.26ms | Max=2877.29ms | P95=2672.08ms
 2026-02-16 14:20:41,119 - FINAL SUMMARY: Avg=2218.26ms | Max=2877.29ms | P95=2672.08ms
+2026-02-16 14:37:36,064 - Sentence='Space exploration has captured human imagination for decades,' | TTS=3417.18ms | Total=3417.18ms | Overhead=0.00ms
+2026-02-16 14:37:38,857 - Sentence='inspiring scientists,' | TTS=2786.80ms | Total=2786.80ms | Overhead=0.00ms
+2026-02-16 14:37:41,544 - Sentence='engineers,' | TTS=2678.63ms | Total=2678.63ms | Overhead=0.00ms
+2026-02-16 14:37:44,157 - Sentence='and dreamers alike.' | TTS=2606.58ms | Total=2606.58ms | Overhead=0.00ms
+2026-02-16 14:37:47,050 - Sentence='With each mission,' | TTS=2885.66ms | Total=2885.66ms | Overhead=0.00ms
+2026-02-16 14:37:49,686 - Sentence='whether launching satellites,' | TTS=2630.36ms | Total=2630.36ms | Overhead=0.00ms
+2026-02-16 14:37:52,678 - Sentence='exploring distant planets,' | TTS=2977.59ms | Total=2977.59ms | Overhead=0.00ms
+2026-02-16 14:37:55,793 - Sentence='or sending astronauts to the International Space Station,' | TTS=3105.06ms | Total=3105.06ms | Overhead=0.00ms
+2026-02-16 14:37:58,625 - Sentence='we learn more about the universe and our place within it.' | TTS=2811.05ms | Total=2811.05ms | Overhead=0.00ms
+2026-02-16 14:38:01,595 - Sentence='Advances in propulsion technology,' | TTS=2935.16ms | Total=2935.16ms | Overhead=0.00ms
+2026-02-16 14:38:04,494 - Sentence='robotics,' | TTS=2891.21ms | Total=2891.21ms | Overhead=0.00ms
+2026-02-16 14:38:07,224 - Sentence='and AI are making deep-space travel more feasible,' | TTS=2724.27ms | Total=2724.27ms | Overhead=0.00ms
+2026-02-16 14:38:10,194 - Sentence='while private companies are opening new possibilities for commercial spaceflight.' | TTS=2957.09ms | Total=2957.09ms | Overhead=0.00ms
+2026-02-16 14:38:12,687 - Sentence='However,' | TTS=2473.19ms | Total=2473.19ms | Overhead=0.00ms
+2026-02-16 14:38:15,648 - Sentence='space exploration is not without challenges,' | TTS=2942.57ms | Total=2942.57ms | Overhead=0.00ms
+2026-02-16 14:38:19,172 - Sentence='including harsh environments,' | TTS=3509.46ms | Total=3509.46ms | Overhead=0.00ms
+2026-02-16 14:38:22,060 - Sentence='radiation exposure,' | TTS=2874.09ms | Total=2874.09ms | Overhead=0.00ms
+2026-02-16 14:38:24,802 - Sentence='and the need for sustainable life-support systems.' | TTS=2733.26ms | Total=2733.26ms | Overhead=0.00ms
+2026-02-16 14:38:27,216 - Sentence='As humanity pushes further into the cosmos,' | TTS=2405.20ms | Total=2405.20ms | Overhead=0.00ms
+2026-02-16 14:38:29,917 - Sentence='collaboration between nations,' | TTS=2691.64ms | Total=2691.64ms | Overhead=0.00ms
+2026-02-16 14:38:32,756 - Sentence='research institutions,' | TTS=2830.91ms | Total=2830.91ms | Overhead=0.00ms
+2026-02-16 14:38:35,280 - Sentence='and private enterprises will be essential.' | TTS=2515.58ms | Total=2515.58ms | Overhead=0.00ms
+2026-02-16 14:38:38,139 - Sentence='Every experiment conducted and every probe launched brings us one step closer to understanding the vastness of space and the potential for life beyond Earth.' | TTS=2846.05ms | Total=2846.05ms | Overhead=0.00ms
+2026-02-16 14:38:41,120 - Sentence='Thank you listening.' | TTS=2929.06ms | Total=2929.06ms | Overhead=0.00ms
+2026-02-16 14:39:02,610 - FINAL SUMMARY: Avg=2839.90ms | Max=3509.46ms | P95=3486.39ms
+2026-02-16 14:40:22,509 - Sentence='urban populations continue to grow at an unprecedented rate.' | TTS=3047.45ms | Total=3047.45ms | Overhead=0.00ms
+2026-02-16 14:40:26,122 - Sentence='City planners and architects are rethinking transportation systems,' | TTS=3605.54ms | Total=3605.54ms | Overhead=0.00ms
+2026-02-16 14:40:28,901 - Sentence='green spaces,' | TTS=2769.11ms | Total=2769.11ms | Overhead=0.00ms
+2026-02-16 14:40:31,887 - Sentence='and energy infrastructure to reduce pollution,' | TTS=2975.80ms | Total=2975.80ms | Overhead=0.00ms
+2026-02-16 14:40:34,842 - Sentence='increase efficiency,' | TTS=2946.85ms | Total=2946.85ms | Overhead=0.00ms
+2026-02-16 14:40:37,892 - Sentence='and improve quality of life.' | TTS=3042.15ms | Total=3042.15ms | Overhead=0.00ms
+2026-02-16 14:40:41,153 - Sentence='Renewable energy sources,' | TTS=3247.57ms | Total=3247.57ms | Overhead=0.00ms
+2026-02-16 14:40:43,768 - Sentence='smart grids,' | TTS=2558.69ms | Total=2558.69ms | Overhead=0.00ms
+2026-02-16 14:40:46,325 - Sentence='and efficient waste management systems are becoming central to modern urban development,' | TTS=2537.57ms | Total=2537.57ms | Overhead=0.00ms
+2026-02-16 14:40:48,590 - Sentence='while policies encouraging cycling,' | TTS=2238.77ms | Total=2238.77ms | Overhead=0.00ms
+2026-02-16 14:40:51,305 - Sentence='walking,' | TTS=2706.61ms | Total=2706.61ms | Overhead=0.00ms
+2026-02-16 14:40:53,887 - Sentence='and public transportation help reduce traffic congestion and carbon emissions.' | TTS=2573.12ms | Total=2573.12ms | Overhead=0.00ms
+2026-02-16 14:40:56,222 - Sentence='Additionally,' | TTS=2311.54ms | Total=2311.54ms | Overhead=0.00ms
+2026-02-16 14:40:59,395 - Sentence='integrating technology such as IoT sensors and AI-driven analytics allows cities to monitor resource usage,' | TTS=3164.20ms | Total=3164.20ms | Overhead=0.00ms
+2026-02-16 14:41:01,963 - Sentence='respond to emergencies more effectively,' | TTS=2551.92ms | Total=2551.92ms | Overhead=0.00ms
+2026-02-16 14:41:04,469 - Sentence='and optimize daily operations.' | TTS=2495.62ms | Total=2495.62ms | Overhead=0.00ms
+2026-02-16 14:41:06,881 - Sentence='Ultimately,' | TTS=2404.33ms | Total=2404.33ms | Overhead=0.00ms
+2026-02-16 14:41:09,915 - Sentence='the goal is to create urban environments that are not only environmentally responsible but also resilient,' | TTS=3027.66ms | Total=3027.66ms | Overhead=0.00ms
+2026-02-16 14:41:13,011 - Sentence='inclusive,' | TTS=3069.54ms | Total=3069.54ms | Overhead=0.00ms
+2026-02-16 14:41:16,041 - Sentence='and adaptable to the evolving needs of their inhabitants.' | TTS=3019.18ms | Total=3019.18ms | Overhead=0.00ms
+2026-02-16 14:41:30,447 - Sentence='thank you for listening.' | TTS=2894.99ms | Total=2894.99ms | Overhead=0.00ms
+2026-02-16 14:41:57,078 - FINAL SUMMARY: Avg=2818.49ms | Max=3605.54ms | P95=3569.74ms

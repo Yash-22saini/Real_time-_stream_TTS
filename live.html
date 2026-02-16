@@ -1,28 +1,296 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Sentence Streaming TTS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Animated background particles */
+    body::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: particles 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes particles {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-50px, -50px); }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      position: relative;
+      z-index: 1;
+      animation: slideIn 0.6s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .mic-icon {
+      font-size: 2.5rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .header p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .header p b {
+      color: #667eea;
+      font-weight: 600;
+    }
+
+    .status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 12px;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .status-bar.connected {
+      background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+      color: #0d5e3a;
+    }
+
+    .status-bar.error {
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      color: #8b0000;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #999;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    .status-bar.connected .status-dot {
+      background: #0d5e3a;
+    }
+
+    .status-bar.error .status-dot {
+      background: #8b0000;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .input-section {
+      margin-bottom: 25px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      padding: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 16px;
+      font-size: 1.05rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      resize: vertical;
+      transition: all 0.3s ease;
+      background: #fafafa;
+      color: #333;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    }
+
+    textarea::placeholder {
+      color: #aaa;
+    }
+
+    .audio-section {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 20px;
+      border-radius: 16px;
+      margin-top: 20px;
+    }
+
+    .audio-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    audio {
+      width: 100%;
+      height: 50px;
+      border-radius: 12px;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    }
+
+    audio::-webkit-media-controls-panel {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .feature-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      textarea {
+        min-height: 150px;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial; padding: 30px;">
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>
+        <span class="mic-icon">🎙️</span>
+        Live TTS Streaming
+      </h1>
+      <p>
+        Type naturally and end sentences with <b>.</b> <b>?</b> <b>!</b> or <b>,</b><br>
+        Audio streams in real-time as you write
+      </p>
+      <div class="feature-tags">
+        <span class="tag">⚡ Real-time</span>
+        <span class="tag">🎯 Low Latency</span>
+        <span class="tag">🔊 High Quality</span>
+      </div>
+    </div>
 
-  <h2>🎙 Live Real-Time Sentence Streaming TTS</h2>
+    <div class="status-bar" id="statusBar">
+      <span class="status-dot"></span>
+      <span id="status">Connecting to server...</span>
+    </div>
 
-  <p>
-    Type normally. Audio will play only after you finish a sentence
-    using <b>.</b> <b>?</b> <b>!</b><b>,</b>
-  </p>
+    <div class="input-section">
+      <textarea 
+        id="textBox" 
+        placeholder="Start typing your text here... The audio will play automatically as you complete each sentence.">
+      </textarea>
+    </div>
 
-  <textarea 
-    id="textBox" 
-    rows="6" 
-    cols="70"
-    placeholder="Start typing... End sentence with . or ? or !">
-  </textarea>
+    <div class="audio-section">
+      <div class="audio-label">
+        🔊 Audio Player
+      </div>
+      <audio id="audioPlayer" controls autoplay></audio>
+    </div>
 
-  <p id="status">Connecting...</p>
-
-  <audio id="audioPlayer" controls autoplay></audio>
+    <div class="footer">
+      Powered by Edge TTS • WebSocket Streaming • Built with ❤️
+    </div>
+  </div>
 
   <script>
     // ✅ Connect WebSocket
@@ -30,6 +298,7 @@
 
     const textBox = document.getElementById("textBox");
     const status = document.getElementById("status");
+    const statusBar = document.getElementById("statusBar");
     const audio = document.getElementById("audioPlayer");
 
     // ✅ MediaSource setup for streaming audio
@@ -51,7 +320,9 @@
 
     // ✅ WebSocket Connected
     ws.onopen = () => {
-      status.innerText = "✅ Connected. Start typing...";
+      status.innerText = "✅ Connected • Ready to stream";
+      statusBar.classList.add('connected');
+      statusBar.classList.remove('error');
     };
 
     // ✅ Receive audio from server
@@ -68,39 +339,38 @@
     };
 
     ws.onerror = () => {
-      status.innerText = "❌ WebSocket error!";
+      status.innerText = "❌ Connection error • Please check server";
+      statusBar.classList.add('error');
+      statusBar.classList.remove('connected');
     };
 
     ws.onclose = () => {
       status.innerText = "🔌 Disconnected from server";
+      statusBar.classList.remove('connected');
     };
 
     // ✅ Sentence Detection
-        let lastSentIndex = 0;
+    let lastSentIndex = 0;
 
-        textBox.addEventListener("input", () => {
-         const fullText = textBox.value;
+    textBox.addEventListener("input", () => {
+      const fullText = textBox.value;
 
-        // 🔥 Detect ., ?, !, and ,
-        const sentences = fullText.match(/[^.!?,]+[.!?,]/g);
-        if (!sentences) return;
+      // 🔥 Detect ., ?, !, and ,
+      const sentences = fullText.match(/[^.!?,]+[.!?,]/g);
+      if (!sentences) return;
 
-        // Send only NEW segments
-        while (lastSentIndex < sentences.length) {
+      // Send only NEW segments
+      while (lastSentIndex < sentences.length) {
         const sentence = sentences[lastSentIndex].trim();
 
         if (sentence.length > 2) {
-            console.log("➡ Sending:", sentence);
-            ws.send(sentence);
+          console.log("➡ Sending:", sentence);
+          ws.send(sentence);
         }
 
-      lastSentIndex++;
-    }
-  });
-
-
+        lastSentIndex++;
+      }
+    });
   </script>
-
 </body>
 </html>
-
